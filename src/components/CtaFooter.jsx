@@ -51,31 +51,63 @@ export default function CtaFooter() {
       </section>
 
       {/* SEÇÃO 10 — QUEM CONDUZ */}
-      <section className="py-32 relative bg-[#0c1324] overflow-hidden" id="mentor">
+      <section className="py-32 relative bg-[#0c1324] overflow-hidden border-t border-white/5" id="mentor">
+        <div className="absolute inset-0 bg-grid-white/[0.01] bg-[length:40px_40px] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
-            {/* Foto Placeholder */}
-            <div className="md:col-span-2 aspect-square rounded-3xl overflow-hidden bg-white/5 border border-white/10 relative">
-               <img 
-                  className="w-full h-full object-cover mix-blend-lighten grayscale opacity-70" 
-                  alt="Quem conduz a mentoria" 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2187&auto=format&fit=crop"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1324] via-transparent to-transparent"></div>
-            </div>
+          <div className="text-center mb-20 max-w-3xl mx-auto">
+            <span className="text-primary font-label uppercase tracking-widest text-xs font-bold block mb-4">Acompanhamento Especialista</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-white leading-tight">
+              Construa com quem domina <br/><span className="text-primary">negócio e tecnologia</span>
+            </h2>
+          </div>
 
-            <div className="md:col-span-3 space-y-8">
-              <span className="text-primary font-label uppercase tracking-widest text-xs font-bold block mb-4">Quem Conduz</span>
-              <h2 className="font-headline text-4xl font-bold text-white leading-tight">
-                Aprenda com quem está construindo, e não apenas comentando o mercado
-              </h2>
-              
-              <div className="space-y-6 text-on-surface-variant font-light text-lg leading-relaxed">
-                <p>A proposta da mentoria não é ocupar o lugar de “fonte absoluta da verdade”. É mais útil do que isso.</p>
-                <p>Você vai acompanhar pessoas que estão usando essas ferramentas no dia a dia, construindo soluções, testando fluxos, refinando processos e descobrindo na prática o que vale a pena — e o que não vale.</p>
-                <p>A mentoria existe para compartilhar esse caminho de forma mais organizada, encurtando a distância entre o que você quer construir e o que consegue colocar de pé.</p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {[
+              {
+                name: "Yves Mourão",
+                tagline: "Estratégia, Inovação e Liderança Tech",
+                bio: "Executivo e empreendedor com mais de 20 anos de carreira e 10 anos em produtos digitais, inovação e liderança de times tech. Atua na interseção entre estratégia, pessoas e tecnologia, aplicando IA, automações e vibe-code para tirar ideias do papel e colocar soluções reais em produção. Fundador da YRM Strategy Lab, tem passagem em multinacionais e atuou como sócio e alta gestão em várias Startups e Scaleups.",
+                img: "/src/assets/yves.jpg",
+                fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2187&auto=format&fit=crop"
+              },
+              {
+                name: "Arthur Brito",
+                tagline: "Automação, IA Aplicada e Processos",
+                bio: "Arthur Brito é especialista em automação, IA aplicada e estruturação de processos, com 5 anos de experiência em marketing, tecnologia e crescimento de negócios. Com passagem por plataformas de e-commerce, gestão de obras e comunicação multicanal, atua desenvolvendo soluções que unem visão de negócio, eficiência operacional e escalabilidade.",
+                img: "/src/assets/arthur.jpg",
+                fallback: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2187&auto=format&fit=crop"
+              }
+            ].map((mentor, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * idx }}
+                className="group p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-300"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                  <div className="lg:col-span-2 aspect-[4/5] rounded-xl overflow-hidden bg-white/5 border border-white/10 relative">
+                    <img 
+                      className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500" 
+                      alt={mentor.name} 
+                      src={mentor.img}
+                      onError={(e) => { e.target.src = mentor.fallback; }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0c1324]/80 via-transparent to-transparent opacity-60"></div>
+                  </div>
+                  <div className="lg:col-span-3 space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-1">{mentor.name}</h3>
+                      <p className="text-primary text-sm font-semibold tracking-wide uppercase">{mentor.tagline}</p>
+                    </div>
+                    <p className="text-on-surface-variant/80 font-light text-[15px] leading-relaxed">
+                      {mentor.bio}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
