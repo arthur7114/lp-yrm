@@ -11,9 +11,9 @@ export default function Navbar() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-xl font-black tracking-tighter text-[#b8c3ff] font-headline"
+          className="flex items-center"
         >
-          YRM Strategy Lab
+          <img src="/logo.png" alt="YRM Strategy Lab" className="h-6 md:h-8 w-auto object-contain" />
         </motion.div>
         
         <div className="hidden md:flex items-center gap-8">
