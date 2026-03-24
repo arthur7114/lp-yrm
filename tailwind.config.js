@@ -1,0 +1,87 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed": "#131b2e",
+        "on-primary-fixed": "#001356",
+        "on-tertiary-fixed": "#07006c",
+        "on-surface": "#dce1fb",
+        "on-primary": "#002388",
+        "on-primary-container": "#efefff",
+        "surface-container-highest": "#2e3447",
+        "surface-container-lowest": "#070d1f",
+        "error-container": "#93000a",
+        "on-primary-fixed-variant": "#0035be",
+        "tertiary": "#c0c1ff",
+        "secondary-fixed": "#dae2fd",
+        "secondary-container": "#3f465c",
+        "on-tertiary-container": "#f1eeff",
+        "background": "#05070e", // Deepened stringently for Nodus Aceternity look
+        "tertiary-container": "#585be6",
+        "outline-variant": "#434656",
+        "on-secondary-container": "#adb4ce",
+        "on-error-container": "#ffdad6",
+        "on-tertiary-fixed-variant": "#2f2ebe",
+        "inverse-primary": "#124af0",
+        "on-surface-variant": "#c4c5d9",
+        "surface": "#0c1324",
+        "surface-tint": "#b8c3ff",
+        "inverse-surface": "#dce1fb",
+        "surface-container-high": "#23293c",
+        "on-secondary": "#283044",
+        "surface-container": "#191f31",
+        "primary-fixed": "#dde1ff",
+        "primary-container": "#2e5bff",
+        "surface-bright": "#33394c",
+        "primary": "#b8c3ff",
+        "outline": "#8e90a2",
+        "on-tertiary": "#1000a9",
+        "tertiary-fixed-dim": "#c0c1ff",
+        "secondary": "#bec6e0",
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-error": "#690005",
+        "secondary-fixed-dim": "#bec6e0",
+        "tertiary-fixed": "#e1e0ff",
+        "error": "#ffb4ab",
+        "primary-fixed-dim": "#b8c3ff",
+        "surface-variant": "#2e3447",
+        "surface-dim": "#0c1324",
+        "on-background": "#dce1fb",
+        "inverse-on-surface": "#2a3043",
+        "surface-container-low": "#151b2d"
+      },
+      fontFamily: {
+        "headline": ["Manrope", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"]
+      },
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        shimmer: "shimmer 2s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": { opacity: 0, transform: "translate(-72%, -62%) scale(0.5)" },
+          "100%": { opacity: 1, transform: "translate(-50%,-40%) scale(1)" },
+        },
+        shimmer: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": { transform: "rotate(215deg) translateX(-500px)", opacity: 0 },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

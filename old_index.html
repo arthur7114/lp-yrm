@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#131b2e",
+              "on-primary-fixed": "#001356",
+              "on-tertiary-fixed": "#07006c",
+              "on-surface": "#dce1fb",
+              "on-primary": "#002388",
+              "on-primary-container": "#efefff",
+              "surface-container-highest": "#2e3447",
+              "surface-container-lowest": "#070d1f",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#0035be",
+              "tertiary": "#c0c1ff",
+              "secondary-fixed": "#dae2fd",
+              "secondary-container": "#3f465c",
+              "on-tertiary-container": "#f1eeff",
+              "background": "#0c1324",
+              "tertiary-container": "#585be6",
+              "outline-variant": "#434656",
+              "on-secondary-container": "#adb4ce",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#2f2ebe",
+              "inverse-primary": "#124af0",
+              "on-surface-variant": "#c4c5d9",
+              "surface": "#0c1324",
+              "surface-tint": "#b8c3ff",
+              "inverse-surface": "#dce1fb",
+              "surface-container-high": "#23293c",
+              "on-secondary": "#283044",
+              "surface-container": "#191f31",
+              "primary-fixed": "#dde1ff",
+              "primary-container": "#2e5bff",
+              "surface-bright": "#33394c",
+              "primary": "#b8c3ff",
+              "outline": "#8e90a2",
+              "on-tertiary": "#1000a9",
+              "tertiary-fixed-dim": "#c0c1ff",
+              "secondary": "#bec6e0",
+              "on-secondary-fixed-variant": "#3f465c",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#bec6e0",
+              "tertiary-fixed": "#e1e0ff",
+              "error": "#ffb4ab",
+              "primary-fixed-dim": "#b8c3ff",
+              "surface-variant": "#2e3447",
+              "surface-dim": "#0c1324",
+              "on-background": "#dce1fb",
+              "inverse-on-surface": "#2a3043",
+              "surface-container-low": "#151b2d"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(12, 19, 36, 0.6);
+        backdrop-filter: blur(24px);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+      @media (max-width: 768px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0c1324]/60 backdrop-blur-xl no-border bg-[#151b2d]/40 shadow-[0px_20px_40px_rgba(220,225,251,0.05)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#b8c3ff] font-headline">YRM Strategy Lab</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#dcdef1] opacity-80 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#trabalho">O que você vai trabalhar</a>
+<a class="text-[#dcdef1] opacity-80 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#estrutura">Estrutura</a>
+<a class="text-[#dcdef1] opacity-80 hover:opacity-100 transition-opacity font-headline font-bold tracking-tight" href="#faq">FAQ</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-bold tracking-tight scale-95 active:scale-90 transition-transform">Quero entrar</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-tertiary-container/10 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="asymmetric-grid gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/15 mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-label uppercase tracking-widest text-primary-fixed-dim">Mentoria IA Premium</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                            Tire sua solução com IA do papel com acompanhamento prático.
+                        </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                            Uma mentoria em grupo para líderes, autônomos e pequenos empresários que buscam escala através da inteligência artificial editorial.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_20px_rgba(184,195,255,0.3)] transition-all">
+                                Quero entrar para a próxima turma
+                            </button>
+<button class="border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-surface-container transition-all">
+                                Ver como a mentoria funciona
+                            </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container-high border border-outline-variant/20 shadow-2xl">
+<img class="w-full h-full object-cover mix-blend-lighten opacity-80" data-alt="abstract digital visualization of neural networks and glowing data streams in deep indigo and electric blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW4dAGnJ8tPcjzA283VOEwk6VItBnlgTPgqn1_RGoJ6XiKkuM_ctCY8WMno8rjhI9_DnV5aCimmnXm9Q6L_FTaItj7eNv0nkzfp_1x9nxpC7ey4rw5RZW1XtZSoOBIpNmGBDmbk8fk58V-b_DBiw0_Cn6NscxtToMFgYEmA7LsLSBCnB2SpUAyUDC8xgppuOS3mFMOI7y3UvtDAhXZRy18WpryKxtml8nS_ecL1f7phPcTZdBGf4EpymyJN8W6juG_UBQbAtw1YnU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<!-- Floating Stats Card -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest/80 backdrop-blur-xl p-6 rounded-2xl border border-outline-variant/15 shadow-xl max-w-[200px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline font-bold text-sm">Escala 10x</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-tight">Implementação direta de fluxos de IA generativa no seu negócio.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dores Section (Tonal Shift) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<span class="text-primary font-label uppercase tracking-[0.2em] text-sm">Desafios Atuais</span>
+<h2 class="font-headline text-4xl font-bold mt-4">Por que a maioria trava na IA?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-surface-container border border-outline-variant/5">
+<span class="material-symbols-outlined text-3xl text-primary mb-6">error_outline</span>
+<h3 class="font-headline text-xl font-bold mb-4">Excesso de Teoria</h3>
+<p class="text-on-surface-variant leading-relaxed">Você já viu mil vídeos, mas não sabe qual ferramenta realmente resolve o seu gargalo diário.</p>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container border border-outline-variant/5">
+<span class="material-symbols-outlined text-3xl text-primary mb-6">psychology</span>
+<h3 class="font-headline text-xl font-bold mb-4">Prompts que não funcionam</h3>
+<p class="text-on-surface-variant leading-relaxed">Suas saídas de IA parecem genéricas e robóticas, sem a "alma" da sua marca ou estratégia.</p>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container border border-outline-variant/5">
+<span class="material-symbols-outlined text-3xl text-primary mb-6">timer_off</span>
+<h3 class="font-headline text-xl font-bold mb-4">Falta de Processo</h3>
+<p class="text-on-surface-variant leading-relaxed">A IA acaba virando mais uma tarefa acumulada em vez de ser o motor que libera seu tempo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Para quem é (Bento Grid) -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold">O Perfil do Mentorado YRM</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high rounded-3xl p-10 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6 opacity-40 group-hover:scale-110 transition-transform duration-500">business_center</span>
+<h3 class="font-headline text-2xl font-bold mb-3 relative z-10">Líderes &amp; Gestores</h3>
+<p class="text-on-surface-variant relative z-10">Que precisam otimizar a operação da equipe e focar em estratégia, não em tarefas operacionais.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container rounded-3xl p-8 flex items-center gap-6">
+<div class="w-16 h-16 shrink-0 bg-tertiary-container/20 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">person</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-1">Autônomos High-Ticket</h3>
+<p class="text-sm text-on-surface-variant">Profissionais que vendem conhecimento e precisam de escala editorial.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container rounded-3xl p-8 flex items-center gap-6">
+<div class="w-16 h-16 shrink-0 bg-secondary-container/20 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-1">Pequenos Empresários</h3>
+<p class="text-sm text-on-surface-variant">Negócios que querem crescer sem necessariamente dobrar o tamanho do time.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Como funciona / Transformação -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="asymmetric-grid gap-20">
+<div class="space-y-12">
+<div>
+<span class="text-primary font-label uppercase tracking-widest text-sm">O Método</span>
+<h2 class="font-headline text-4xl font-bold mt-4 mb-6">Do Caos à Inteligência Editorial</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                                Não entregamos apenas prompts. Construímos com você a **infraestrutura de pensamento** da sua solução, onde a IA é o braço executor que mantém o padrão de qualidade YRM.
+                            </p>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold">Acompanhamento Síncrono</h4>
+<p class="text-sm text-on-surface-variant">Sessões ao vivo para tirar dúvidas reais do seu fluxo de trabalho.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold">Laboratório Prático</h4>
+<p class="text-sm text-on-surface-variant">Você sai de cada encontro com uma peça da sua estratégia implementada.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold">Comunidade de Elite</h4>
+<p class="text-sm text-on-surface-variant">Networking com outros líderes que estão na mesma jornada de inovação.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-8 rounded-3xl border border-outline-variant/10 shadow-inner">
+<div class="space-y-8">
+<div class="pb-8 border-b border-outline-variant/10">
+<span class="text-xs text-on-surface-variant mb-2 block uppercase font-bold tracking-tighter">Antes da Mentoria</span>
+<p class="line-through text-on-surface-variant/50">Cansaço criativo, posts genéricos e perda de tempo em tarefas repetitivas.</p>
+</div>
+<div>
+<span class="text-xs text-primary mb-2 block uppercase font-bold tracking-tighter">Depois do YRM Strategy Lab</span>
+<p class="text-on-surface font-medium text-lg">Sistemas de IA personalizados que pensam como você e executam em segundos.</p>
+</div>
+<div class="pt-8">
+<div class="p-4 rounded-xl bg-primary/10 border border-primary/20">
+<p class="text-sm italic">"A mentoria mudou minha forma de enxergar a operação. Hoje a IA não é uma ferramenta, é meu sócio operacional."</p>
+<p class="text-xs font-bold mt-2 text-primary">— Mentorado Beta</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- O que você vai trabalhar (Tools) -->
+<section class="py-24 bg-surface" id="trabalho">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-bold">Ecossistema de Ferramentas</h2>
+<p class="text-on-surface-variant mt-4">Trabalhamos com o que há de mais avançado no mercado, focando no que traz retorno real.</p>
+</div>
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-bold border border-outline-variant/10">OpenAI</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-bold border border-outline-variant/10">Claude</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-bold border border-outline-variant/10">Make.com</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<h4 class="font-bold mb-2">Prompt Engineering</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Aprenda a criar arquiteturas de comando para resultados determinísticos.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+</div>
+<h4 class="font-bold mb-2">Curadoria Editorial</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Como treinar a IA para manter o tom de voz e a sofisticação da sua marca.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">settings_applications</span>
+</div>
+<h4 class="font-bold mb-2">Automação de Fluxos</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Conecte ferramentas para que a IA trabalhe enquanto você dorme.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<h4 class="font-bold mb-2">Análise de Dados</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Use IA para decifrar o que seu mercado quer antes dele mesmo saber.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Estrutura dos 8 encontros -->
+<section class="py-24 bg-surface-container-low" id="estrutura">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col items-center text-center mb-20">
+<span class="text-primary font-label uppercase tracking-widest text-sm mb-4">A Jornada</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold max-w-2xl leading-tight">8 Semanas para a sua Nova Operação</h2>
+</div>
+<div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary/50 before:via-outline-variant/20 before:to-transparent">
+<!-- Meeting 1-2 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface-container-high border border-outline-variant/10 shadow-sm">
+<h4 class="font-headline font-bold text-lg mb-2 text-primary">Fundamentos &amp; Alinhamento</h4>
+<p class="text-sm text-on-surface-variant">Setup das ferramentas e identificação dos gargalos estratégicos do seu negócio.</p>
+</div>
+</div>
+<!-- Meeting 3-4 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface-container-high border border-outline-variant/10 shadow-sm">
+<h4 class="font-headline font-bold text-lg mb-2 text-primary">Engenharia de Prompt Avançada</h4>
+<p class="text-sm text-on-surface-variant">Dominando a arte de comandar IAs generativas para saídas de alta fidelidade.</p>
+</div>
+</div>
+<!-- Meeting 5-6 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface-container-high border border-outline-variant/10 shadow-sm">
+<h4 class="font-headline font-bold text-lg mb-2 text-primary">Automação &amp; Escala</h4>
+<p class="text-sm text-on-surface-variant">Integrando Make.com para criar fluxos autônomos de conteúdo e gestão.</p>
+</div>
+</div>
+<!-- Meeting 7-8 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface-container-high border border-outline-variant/10 shadow-sm">
+<h4 class="font-headline font-bold text-lg mb-2 text-primary">Implementação &amp; Demo Day</h4>
+<p class="text-sm text-on-surface-variant">Ajustes finais no seu sistema e apresentação dos resultados obtidos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diferenciais -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary-container/20 rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px]"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl font-bold mb-12">O Diferencial YRM</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-4xl text-primary">psychology_alt</span>
+<div>
+<h5 class="font-bold text-xl mb-2">Visão Executiva</h5>
+<p class="text-on-surface-variant">Não é sobre "fazer figurinhas". É sobre tomada de decisão assistida e ganho de margem de lucro.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-4xl text-primary">diversity_3</span>
+<div>
+<h5 class="font-bold text-xl mb-2">Networking de Valor</h5>
+<p class="text-on-surface-variant">Acesso a um grupo seleto de profissionais que não se contentam com o básico.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-8">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">Perguntas Frequentes</h2>
+<div class="space-y-4">
+<details class="group bg-surface rounded-2xl border border-outline-variant/10 overflow-hidden" open="">
+<summary class="p-6 flex justify-between items-center cursor-pointer list-none">
+<span class="font-bold">Preciso saber programação?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                            Não. Focamos em ferramentas No-Code e em como utilizar a linguagem natural (português) para comandar sistemas complexos de IA.
+                        </div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/10 overflow-hidden">
+<summary class="p-6 flex justify-between items-center cursor-pointer list-none">
+<span class="font-bold">Quanto tempo dura a mentoria?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                            A jornada principal tem duração de 8 semanas com encontros semanais ao vivo, além de suporte contínuo em canal exclusivo.
+                        </div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/10 overflow-hidden">
+<summary class="p-6 flex justify-between items-center cursor-pointer list-none">
+<span class="font-bold">As aulas ficam gravadas?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                            Sim, todos os encontros são gravados e disponibilizados em uma plataforma premium para você rever quando quiser durante 1 ano.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 bg-surface overflow-hidden relative">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#434656 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline text-5xl font-extrabold mb-8 tracking-tight">Pronto para liderar a próxima era do seu negócio?</h2>
+<p class="text-xl text-on-surface-variant mb-12">As vagas para a mentoria YRM Strategy Lab são limitadas para garantir a qualidade do acompanhamento individual.</p>
+<div class="flex flex-col items-center gap-6">
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-bold text-xl hover:scale-105 transition-all shadow-2xl shadow-primary/20">
+                            Quero entrar para a próxima turma
+                        </button>
+<p class="text-sm text-on-surface-variant/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified_user</span> 
+                            Garantia incondicional de 15 dias após o início.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#434656]/15 tonal-shift bg-[#151b2d]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6 font-['Inter'] text-sm tracking-wide">
+<div class="text-lg font-bold text-[#b8c3ff] font-headline">YRM Strategy Lab</div>
+<div class="flex gap-8">
+<a class="text-[#dcdef1]/60 hover:text-[#b8c3ff] transition-colors" href="#">Privacidade</a>
+<a class="text-[#dcdef1]/60 hover:text-[#b8c3ff] transition-colors" href="#">Termos de Uso</a>
+<a class="text-[#dcdef1]/60 hover:text-[#b8c3ff] transition-colors" href="#">Instagram</a>
+<a class="text-[#dcdef1]/60 hover:text-[#b8c3ff] transition-colors" href="#">LinkedIn</a>
+</div>
+<div class="text-[#dcdef1]/40">© 2024 YRM Strategy Lab - Mentoria IA. Todos os direitos reservados.</div>
+</div>
+</footer>
+</body></html>
