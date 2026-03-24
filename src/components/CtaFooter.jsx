@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, MessageSquareQuote, ShieldCheck } from 'lucide-react';
 
+import yvesImg from '../assets/Yves.png';
+import arthurImg from '../assets/arthur.png';
 export default function CtaFooter() {
   const testimonials = [
     { text: "O que mais me chamou atenção foi ver a aplicação prática. Não foi uma aula sobre possibilidades abstratas, foi uma visão real de como usar no dia a dia e transformar isso em algo útil.", author: "Participante da aula presencial 'Da ideia ao produto digital'", role: "— Empreendedor" },
@@ -67,14 +69,14 @@ export default function CtaFooter() {
                 name: "Yves Mourão",
                 tagline: "Estratégia, Inovação e Liderança Tech",
                 bio: "Executivo e empreendedor com mais de 20 anos de carreira e 10 anos em produtos digitais, inovação e liderança de times tech. Atua na interseção entre estratégia, pessoas e tecnologia, aplicando IA, automações e vibe-code para tirar ideias do papel e colocar soluções reais em produção. Fundador da YRM Strategy Lab, tem passagem em multinacionais e atuou como sócio e alta gestão em várias Startups e Scaleups.",
-                img: "/src/assets/yves.jpg",
+                img: yvesImg,
                 fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2187&auto=format&fit=crop"
               },
               {
                 name: "Arthur Brito",
                 tagline: "Automação, IA Aplicada e Processos",
                 bio: "Arthur Brito é especialista em automação, IA aplicada e estruturação de processos, com 5 anos de experiência em marketing, tecnologia e crescimento de negócios. Com passagem por plataformas de e-commerce, gestão de obras e comunicação multicanal, atua desenvolvendo soluções que unem visão de negócio, eficiência operacional e escalabilidade.",
-                img: "/src/assets/arthur.jpg",
+                img: arthurImg,
                 fallback: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2187&auto=format&fit=crop"
               }
             ].map((mentor, idx) => (
